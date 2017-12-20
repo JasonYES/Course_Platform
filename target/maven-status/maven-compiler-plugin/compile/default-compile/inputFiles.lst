@@ -1,0 +1,16 @@
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/service/CourseShowService.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/model/CourseModel.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/Application.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/controller/IndexController.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/service/CourseChooseService.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/serviceimpl/CourseShowServiceImpl.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/controller/SmartController.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/model/ChooseModel.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/controller/CourseController.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/service/SmartService.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/serviceimpl/CourseChooseServiceImpl.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/model/UserModel.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/model/UserCourseModel.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/security/LoginService.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/serviceimpl/SmartServiceImpl.java
+/home/jason/IdeaProjects/CourseDesignOne/src/main/java/com/fang/CD1/security/LoginModel.java
