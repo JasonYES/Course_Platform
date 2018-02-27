@@ -34,12 +34,13 @@ public class CourseController {
     @RequestMapping(value = "/course", method = RequestMethod.GET)
     public String course(HttpSession httpSession, Model model) {
 
-//        int userName =(Integer) httpSession.getAttribute("userName");
+        int userName =(Integer) httpSession.getAttribute("userName");
 
 //        List<UserCourseModel> list1 = courseShowService.getChosen(userName);
 //        List<CourseModel> list = courseShowService.getCourses(list1);
-//        List<UserCourseModel> list1 = courseShowService.getChosen(150410410);
-        List<UserCourseModel> list1 = csMapper.getById(150410410);
+        List<UserCourseModel> list1 = courseShowService.getChosen(userName);
+//        List<UserCourseModel> list1 = csMapper.getById(userName);
+//        List<UserCourseModel> list1 = csMapper.getById(11);
         List<CourseModel> list = courseShowService.getCourses(list1);
         model.addAttribute("list", list);
         model.addAttribute("chooseModel", new ChooseModel());

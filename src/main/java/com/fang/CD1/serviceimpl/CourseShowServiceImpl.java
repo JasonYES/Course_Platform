@@ -1,5 +1,6 @@
 package com.fang.CD1.serviceimpl;
 
+import com.fang.CD1.mapper.CSMapper;
 import com.fang.CD1.model.CourseModel;
 import com.fang.CD1.model.UserCourseModel;
 import com.fang.CD1.service.CourseShowService;
@@ -22,18 +23,22 @@ public class CourseShowServiceImpl implements CourseShowService{
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    @Autowired
+    private CSMapper csMapper;
 
     @Override
     public List<UserCourseModel> getChosen(int Stunumber) {
-        String sql ="select * from cs where StuId = " + Stunumber;
-        List list = jdbcTemplate.query(sql, new RowMapper() {
-            @Override
-            public Object mapRow(ResultSet rs, int i) throws SQLException {
-                UserCourseModel userCourseModel = new UserCourseModel();
-                userCourseModel.setCourseId(rs.getInt(3));
-                return userCourseModel;
-            }
-        });
+
+        List<UserCourseModel> list = csMapper.getById(Stunumber);
+//        String sql ="select * from cs where StuId = " + Stunumber;
+//        List list = jdbcTemplate.query(sql, new RowMapper() {
+//            @Override
+//            public Object mapRow(ResultSet rs, int i) throws SQLException {
+//                UserCourseModel userCourseModel = new UserCourseModel();
+//                userCourseModel.setCourseId(rs.getInt(3));
+//                return userCourseModel;
+//            }
+//        });
         return list;
     }
 

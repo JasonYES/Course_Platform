@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface CSMapper {
 
-    @Select("SELECT * FROM cs where Id = #{Id}")
+    @Select("SELECT * FROM cs where StuId = #{Id}")
 //    @Results({
 //            @Result(property = "Id",  column = "Id"),
 //            @Result(property = "StuId", column = "StuId"),
