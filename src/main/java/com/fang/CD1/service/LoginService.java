@@ -1,4 +1,4 @@
-package com.fang.CD1.security;
+package com.fang.CD1.service;
 
 import com.fang.CD1.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +25,7 @@ public class LoginService {
 
     public boolean loginCheck(int number, int password){
         String sql = "select Password from student where StudentId ="+ number ;
+
         List<UserModel> list = jdbcTemplate.query(sql, new RowMapper() {
             @Override
             public Object mapRow(ResultSet rs, int i) throws SQLException {

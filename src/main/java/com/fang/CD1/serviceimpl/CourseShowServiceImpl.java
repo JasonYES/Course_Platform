@@ -1,12 +1,10 @@
 package com.fang.CD1.serviceimpl;
 
-import com.fang.CD1.mapper.CSMapper;
 import com.fang.CD1.model.CourseModel;
 import com.fang.CD1.model.UserCourseModel;
 import com.fang.CD1.service.CourseShowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
@@ -19,17 +17,15 @@ import java.util.List;
  * Created by Fang Yi on 16-12-25.
  */
 @Service
-public class CourseShowServiceImpl implements CourseShowService{
+public class CourseShowServiceImpl implements CourseShowService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    @Autowired
-    private CSMapper csMapper;
+
 
     @Override
     public List<UserCourseModel> getChosen(int Stunumber) {
 
-        List<UserCourseModel> list = csMapper.getById(Stunumber);
 //        String sql ="select * from cs where StuId = " + Stunumber;
 //        List list = jdbcTemplate.query(sql, new RowMapper() {
 //            @Override
@@ -39,7 +35,8 @@ public class CourseShowServiceImpl implements CourseShowService{
 //                return userCourseModel;
 //            }
 //        });
-        return list;
+        List<UserCourseModel> xx = new ArrayList<UserCourseModel>();
+        return xx;
     }
 
     @Override
@@ -47,7 +44,7 @@ public class CourseShowServiceImpl implements CourseShowService{
 
         List<CourseModel> listOut = new ArrayList<CourseModel>();
         Iterator<UserCourseModel> iterator = listIn.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             String sql = "select * from course where Id =" + iterator.next().getCourseId();
             List list = jdbcTemplate.query(sql, new org.springframework.jdbc.core.RowMapper() {
                 @Override
@@ -96,11 +93,11 @@ public class CourseShowServiceImpl implements CourseShowService{
     @Override
     public List<CourseModel> getFilterCourses(List<UserCourseModel> list1, List<CourseModel> list2) {
         Iterator<UserCourseModel> iterator = list1.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             UserCourseModel us = iterator.next();
             Iterator<CourseModel> iter = list2.iterator();
-            while(iter.hasNext()){
-                if(iter.next().getId() == us.getCourseId()) {
+            while (iter.hasNext()) {
+                if (iter.next().getId() == us.getCourseId()) {
                     iter.remove();
                     break;
                 }

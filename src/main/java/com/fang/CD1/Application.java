@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Created by Fang Yi on 16-12-23.
  */
-@MapperScan("com.fang.CD1.mapper")
+//@MapperScan("com.fang.CD1.mapper")
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {

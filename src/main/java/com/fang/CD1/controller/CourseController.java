@@ -1,10 +1,8 @@
 package com.fang.CD1.controller;
 
-import com.fang.CD1.mapper.CSMapper;
 import com.fang.CD1.model.ChooseModel;
 import com.fang.CD1.model.CourseModel;
 import com.fang.CD1.model.UserCourseModel;
-import com.fang.CD1.security.LoginModel;
 import com.fang.CD1.service.CourseChooseService;
 import com.fang.CD1.service.CourseShowService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +26,6 @@ public class CourseController {
     CourseShowService courseShowService;
     @Autowired
     CourseChooseService courseChooseService;
-    @Autowired
-    CSMapper csMapper;
 
     @RequestMapping(value = "/course", method = RequestMethod.GET)
     public String course(HttpSession httpSession, Model model) {
@@ -39,8 +35,6 @@ public class CourseController {
 //        List<UserCourseModel> list1 = courseShowService.getChosen(userName);
 //        List<CourseModel> list = courseShowService.getCourses(list1);
         List<UserCourseModel> list1 = courseShowService.getChosen(userName);
-//        List<UserCourseModel> list1 = csMapper.getById(userName);
-//        List<UserCourseModel> list1 = csMapper.getById(11);
         List<CourseModel> list = courseShowService.getCourses(list1);
         model.addAttribute("list", list);
         model.addAttribute("chooseModel", new ChooseModel());

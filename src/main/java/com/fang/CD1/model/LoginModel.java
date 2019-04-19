@@ -1,4 +1,4 @@
-package com.fang.CD1.security;
+package com.fang.CD1.model;
 
 /**
  * Created by Fang Yi on 16-12-24.

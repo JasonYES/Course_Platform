@@ -3,17 +3,15 @@ package com.fang.CD1.controller;
 import com.fang.CD1.model.ChooseModel;
 import com.fang.CD1.model.CourseModel;
 import com.fang.CD1.model.UserCourseModel;
-import com.fang.CD1.security.LoginModel;
-import com.fang.CD1.security.LoginService;
+import com.fang.CD1.model.LoginModel;
+import com.fang.CD1.service.LoginService;
 import com.fang.CD1.service.CourseShowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.util.List;
 
 /**
